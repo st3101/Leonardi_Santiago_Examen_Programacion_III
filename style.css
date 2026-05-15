@@ -24,7 +24,7 @@ nav{
     grid-row: 2;
 }
 
-#cartas{
+#cartas , #cartas-guardadas{
     display: grid;
     grid-template-columns: repeat(2, 1fr);    /*dos columnas*/
     gap: 10px;
