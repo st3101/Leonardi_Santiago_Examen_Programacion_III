@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    mostrarCartas();
+    mostrarCartasGuardadas();
 
 });
 
 
-function mostrarCartas(){
+function mostrarCartasGuardadas(){
 
     let cartasGuardadas = JSON.parse(
         localStorage.getItem("cartas")
@@ -27,7 +27,7 @@ function mostrarCartas(){
             );
     
             contenedor.appendChild(
-                nuevaCarta.createHtmlElement()
+                nuevaCarta.createHtmlElementGuardado()
             );
 
         });

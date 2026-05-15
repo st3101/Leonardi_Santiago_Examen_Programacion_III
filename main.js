@@ -52,9 +52,6 @@ async function cargarCartas(){
     
             });
         }
-        
-        console.log(arrayCartas);
-
 
         for (let i = inicio; i <= fin; i++) {
         

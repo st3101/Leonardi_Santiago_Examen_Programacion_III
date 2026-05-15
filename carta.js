@@ -43,27 +43,49 @@ class Carta {
         let boton = div.querySelector("button")
 
         boton.addEventListener("click", () => {
-            console.log("HOLA")
             Carta.guardarCarta(this);
         });
         
         return div;
     }
 
+    createHtmlElementGuardado() {
+
+        let div = document.createElement("div");
+
+        div.innerHTML = 
+            `<h2>${this.code}</h2>
+            <a href="${this.imagen}"> 
+            <img src="${this.imagen}" alt="${this.code}">
+            <a/>
+            <p>${this.suit}</p>
+            <p>${this.value}</p>`;
+        
+        return div;
+    }
 
     static guardarCarta(carta){
 
         let cartas = JSON.parse(localStorage.getItem("cartas"));
-    
+
         if(cartas == null){
             cartas = [];
         }
     
-        cartas.push(carta);
+        let repetida = 1;
     
-        localStorage.setItem("cartas",JSON.stringify(cartas));
+        for(let i = 0; i < cartas.length; i++){
+            if(cartas[i].code == carta.code){
+                repetida = 0;
+            }
+    
+        }
+    
+        if(repetida){
+            cartas.push(carta);
+        }
+        localStorage.setItem("cartas", JSON.stringify(cartas));
     
     }
-
     
 }
