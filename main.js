@@ -1,5 +1,5 @@
 let arrayCartas = [];
-var pagina = 1;
+let pagina = 1;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let botonAnterior = document.getElementById("anterior");
     botonAnterior.addEventListener("click", paginaAnterior);
+
+
 
 });
 
@@ -32,7 +34,6 @@ async function cargarCartas(){
     }
 
     try{
-
 
         if(arrayCartas.length == 0)
         {
@@ -60,22 +61,12 @@ async function cargarCartas(){
             contenedor.appendChild(arrayCartas[i].createHtmlElement())
         }
 
-        // arrayCartas.forEach(carta => {
-
-        //     contenedor.appendChild(
-        //         carta.createHtmlElement()
-        //     );
-
-        // });
 
     }catch(error){
 
         console.log(error);
 
     }
-
-
-  
 }
 
 function paginaSiguiente(){
