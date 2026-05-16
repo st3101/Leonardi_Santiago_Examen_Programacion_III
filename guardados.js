@@ -44,9 +44,7 @@ function crearCarta(cartas) {
                 carta.imagen
             );
 
-            contenedor.appendChild(
-                nuevaCarta.createHtmlElementGuardado()
-            );
+            contenedor.appendChild(nuevaCarta.createHtmlElementGuardado());
 
         });
 

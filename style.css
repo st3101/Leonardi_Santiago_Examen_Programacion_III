@@ -1,5 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
 body{
-    background-color: cadetblue;
+    background-color: rgb(45, 44, 44);
 }
 
 main{
@@ -37,4 +44,50 @@ nav{
         grid-template-columns: 1fr; /* Una columnas */
     }
 
+}
+
+.carta-efecto{
+    transition: transform 0.3s;
+}
+
+.carta-efecto:hover{
+    transform: scale(1.05);
+}
+
+button{
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #5b5959;
+}
+
+button:hover{
+
+    opacity: 0.7;
+
+}
+
+#panel-izquierda{
+    display: flex;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: rgb(61, 61, 61);
+    padding: 20px;
+}
+
+.paginas{
+    text-decoration: none;
+    color: white;
+    background-color: #5b5959;
+    border-radius: 8px;
+    text-align: center;
+}
+.paginas:hover{
+    color: gray;
 }

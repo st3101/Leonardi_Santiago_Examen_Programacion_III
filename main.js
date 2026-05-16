@@ -55,7 +55,7 @@ async function cargarCartas(){
 
         for (let i = inicio; i <= fin; i++) {
         
-            contenedor.appendChild(arrayCartas[i].createHtmlElement())
+            contenedor.append(arrayCartas[i].createHtmlElement())
         }
 
 

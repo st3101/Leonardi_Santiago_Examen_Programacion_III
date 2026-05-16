@@ -33,8 +33,8 @@ class Carta {
         div.innerHTML = 
             `<h2>${this.code}</h2>
             <a href="${this.imagen}"> 
-            <img src="${this.imagen}" alt="${this.code}">
-            <a/>
+            <img class=carta-efecto src="${this.imagen}" alt="${this.code}">
+            </a>
             <p>${this.suit}</p>
             <p>${this.value}</p>
             <button id="${this.code}">Guardar</button>`;
@@ -53,10 +53,11 @@ class Carta {
 
         let div = document.createElement("div");
 
+        
         div.innerHTML = 
             `<h2>${this.code}</h2>
             <a href="${this.imagen}"> 
-            <img src="${this.imagen}" alt="${this.code}">
+            <img class=carta-efecto src="${this.imagen}" alt="${this.code}">
             <a/>
             <p>${this.suit}</p>
             <p>${this.value}</p>`;
@@ -78,7 +79,6 @@ class Carta {
             if(cartas[i].code == carta.code){
                 repetida = 0;
             }
-    
         }
     
         if(repetida){
